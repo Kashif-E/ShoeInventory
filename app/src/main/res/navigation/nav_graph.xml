@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/introductionFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="io.intelligible.shoeinventory.views.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment"
+            app:popUpTo="@id/introductionFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/introductionFragment"
+        android:name="io.intelligible.shoeinventory.views.IntroductionFragment"
+        android:label="IntroductionFragment" >
+        <action
+            android:id="@+id/action_introductionFragment_to_getStartedFragment2"
+            app:destination="@id/getStartedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/getStartedFragment"
+        android:name="io.intelligible.shoeinventory.views.GetStartedFragment"
+        android:label="GetStartedFragment" >
+        <action
+            android:id="@+id/action_getStartedFragment_to_loginFragment"
+
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListFragment"
+        android:name="io.intelligible.shoeinventory.views.ShoeListFragment"
+        android:label="Shoe List" >
+        <action
+            android:id="@+id/action_shoeListFragment_to_addShoeFragment"
+            app:destination="@id/addShoeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addShoeFragment"
+        android:name="io.intelligible.shoeinventory.views.AddShoeFragment"
+        android:label="Add Shoe" />
+</navigation>

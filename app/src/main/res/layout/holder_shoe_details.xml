@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="shoe"
+            type="io.intelligible.shoeinventory.model.ShoeModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/shoename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/muli_bold"
+                android:text="@{String.format(@string/shoe_name, shoe.shoeName) }"
+                tools:layout_editor_absoluteX="77dp"
+                tools:layout_editor_absoluteY="33dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/muli_bold"
+                android:text="@{String.format(@string/company, shoe.company) }"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/muli_bold"
+                android:text="@{String.format(@string/shoe_size, shoe.shoeSize) }"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/muli_bold"
+                android:text="@{String.format(@string/shoe_desc, shoe.shoeDescription) }"/>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

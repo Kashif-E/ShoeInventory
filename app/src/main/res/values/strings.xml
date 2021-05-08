@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ShoeInventory</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="shoe_inventory">Shoe Inventory</string>
+    <string name="keep_track_of_you_show_inventory">Keep Track of You Show Inventory</string>
+    <string name="add_the_details_and_get_the_list_of_your_shoes_at_one_place">Add The details and get the list of your Shoes at one place</string>
+    <string name="login_and_star_tracking_your_show_inventory">Login and star tracking your show Inventory</string>
+    <string name="shoe_name">Shoe Name : %s</string>
+    <string name="company">Company : %s</string>
+    <string name="shoe_size">Shoe Size : %s</string>
+    <string name="shoe_desc">Description: %s</string>
+</resources>
