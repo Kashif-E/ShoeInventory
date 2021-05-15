@@ -32,27 +32,33 @@
                 android:text="@{String.format(@string/shoe_name, shoe.shoeName) }"
                 tools:layout_editor_absoluteX="77dp"
                 tools:layout_editor_absoluteY="33dp" />
+
             <TextView
+                android:id="@+id/shoeSize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:textSize="14sp"
                 android:fontFamily="@font/muli_bold"
-                android:text="@{String.format(@string/company, shoe.company) }"/>
+                android:text="@{String.format(@string/company, shoe.company) }"
+                android:textSize="14sp" />
+
             <TextView
+                android:id="@+id/company"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:textSize="14sp"
                 android:fontFamily="@font/muli_bold"
-                android:text="@{String.format(@string/shoe_size, shoe.shoeSize) }"/>
+                android:text="@{String.format(@string/shoe_size, shoe.shoeSize) }"
+                android:textSize="14sp" />
+
             <TextView
+                android:id="@+id/descrip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:textSize="14sp"
                 android:fontFamily="@font/muli_bold"
-                android:text="@{String.format(@string/shoe_desc, shoe.shoeDescription) }"/>
+                android:text="@{String.format(@string/shoe_desc, shoe.shoeDescription) }"
+                android:textSize="14sp" />
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>

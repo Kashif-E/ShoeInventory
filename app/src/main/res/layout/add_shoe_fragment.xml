@@ -4,7 +4,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
+    <variable
+        name="model"
+        type="io.intelligible.shoeinventory.viewmodel.SharedViewModel" />
     </data>
 
     <LinearLayout
@@ -28,6 +30,7 @@
                 android:id="@+id/etShoeme"
                 android:background="@color/white"
                 android:layout_width="match_parent"
+                android:text="@={model.shoeName}"
                 android:layout_height="wrap_content"
                 android:hint="Shoe Name" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -47,6 +50,7 @@
                 android:id="@+id/etShoeCompany"
                 android:layout_width="match_parent"
                 android:background="@color/white"
+                android:text="@={model.company}"
                 android:layout_height="wrap_content"
                 android:hint="Company" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -66,6 +70,7 @@
                 android:id="@+id/etShoeSize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@={model.shoeSize}"
                 android:background="@color/white"
                 android:hint="Size" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -86,11 +91,13 @@
                 android:layout_width="match_parent"
                 android:background="@color/white"
                 android:layout_height="wrap_content"
+                android:text="@={model.description}"
                 android:hint="Desc" />
         </com.google.android.material.textfield.TextInputLayout>
         <Button
             android:id="@+id/btnAdd"
             android:layout_margin="10dp"
+            android:onClick="@{() -> model.onAddClick()}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add"
